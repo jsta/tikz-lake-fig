@@ -19,11 +19,6 @@
 
 \PassOptionsToPackage{dvipsnames}{xcolor}
 
-\def\begincols{\begin{columns}}
-\def\endcols{\end{columns}}
-\def\begincol{\begin{column}}
-\def\endcol{\end{column}}
-
 \def\testonearg[#1]{Testing one arg: '#1'}
 
 \usetikzlibrary{decorations.pathmorphing,calc}
@@ -67,8 +62,8 @@
 \end{tikzpicture}
 }
 
-\def\lakediagramblue{
-\begin{tikzpicture}[scale = 0.6]
+\def\lakediagramblue[#1]{
+\begin{tikzpicture}[scale = #1]
 % https://tex.stackexchange.com/questions/95044/create-diagrams-in-latex-with-tikz
 
 % Define some reference points 
@@ -107,11 +102,11 @@
 \end{tikzpicture}
 }
 
-\def\connectivitydiagram{
+\def\connectivitydiagram[#1]{
 \begin{columns}
 
 \begin{column}{0.25\textwidth}
-    \begin{tikzpicture}
+    \begin{tikzpicture}[scale = #1]
       \draw [-,ultra thick, cyan] (-1,3) to [out=270,in=180] (0.2,2) to [out=0,in=90] (0,0.3) to [out=90,in=0] (0,-1) to [out=90,in=0] (0.2,-2) to [out=180,in=90] (-1,-3);
       \draw[cyan, ultra thick, domain=0:350, smooth cycle, fill=cyan,yshift=20] plot (\x:0.5+rnd*0.25);
       \draw[cyan, ultra thick, domain=0:350, smooth cycle, fill=cyan,yshift=-50] plot (\x:0.8+rnd*0.5);
@@ -120,7 +115,7 @@
   \end{column}
   
   \begin{column}{0.25\textwidth}
-    \begin{tikzpicture}
+    \begin{tikzpicture}[scale = #1]
       \draw [-,ultra thick, cyan] (-1,3) to [out=270,in=180] (0.2,2) to [out=0,in=90] (0,0);
       \draw[cyan, ultra thick, domain=0:350, smooth cycle, fill=cyan] (0,-3) plot (\x:1+rnd*0.5);
       \node at (0, 0) {Primary};
@@ -128,7 +123,7 @@
   \end{column}
   
   \begin{column}{0.25\textwidth}
-  \begin{tikzpicture}
+  \begin{tikzpicture}[scale = #1]
       \draw [-,ultra thick, cyan] (0,0) to [out=90,in=0] (0.2,-2) to [out=180,in=90] (-1,-3);
       \draw[cyan, ultra thick, domain=0:350, smooth cycle, fill=cyan] (0,3) plot (\x:1+rnd*0.5);
       \node at (0, 0) {Headwater};
@@ -136,7 +131,7 @@
   \end{column}
   
   \begin{column}{0.25\textwidth}
-    \begin{tikzpicture}
+    \begin{tikzpicture}[scale = #1]
       \draw[cyan, ultra thick, domain=0:350, smooth cycle, fill=cyan] plot (\x:1+rnd*0.5);
       \node at (0, 0) {Isolated};
     \end{tikzpicture}
@@ -169,8 +164,8 @@
  p{#1}%
  <{\egroup}} 
  
-\def\secondaryprofile{
-\begin{tikzpicture}[scale = 0.6]
+\def\secondaryprofile[#1]{
+\begin{tikzpicture}[scale = #1]
   \draw [-,ultra thick, cyan!40] (1,0) to [out=0,in=180] (2.25,0);
   \draw [-,ultra thick, dashed, cyan!40] (6,0) to [out=0,in=180] (7.25,0);
   \node at (2, 1) {Secondary};
@@ -210,8 +205,8 @@
 \end{tikzpicture}
 }
 
-\def\headwaterprofile{
-\begin{tikzpicture}[scale = 0.6]
+\def\headwaterprofile[#1]{
+\begin{tikzpicture}[scale = #1]
   \draw [-,ultra thick, cyan!40] (2,0) to [out=0,in=180] (3.25,0);
   \node at (0.4, 1) {Headwater};
 \fill[
@@ -232,8 +227,8 @@
 \end{tikzpicture}
 }
 
-\def\primaryprofile{
-\begin{tikzpicture}[scale = 0.6]
+\def\primaryprofile[#1]{
+\begin{tikzpicture}[scale = #1]
   \draw [-,ultra thick, cyan!40] (-2,0) to [out=0,in=180] (-3.25,0);
   \draw [-,ultra thick, dashed, cyan!40] (2,0) to [out=0,in=180] (3.25,0);
   \node at (0.4, 1) {Primary};
@@ -255,8 +250,8 @@
 \end{tikzpicture}
 }
 
-\def\isolatedprofile{
-\begin{tikzpicture}[scale = 0.4]
+\def\isolatedprofile[#1]{
+\begin{tikzpicture}[scale = #1]
   \node at (0.65, 1) {Isolated};
 \fill[
   top color=cyan!100,
