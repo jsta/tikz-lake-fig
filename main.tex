@@ -1,17 +1,38 @@
 \documentclass[bigger]{beamer}
 \usepackage[utf8]{inputenc}
-\usepackage{subfiles}
 \usepackage{graphicx}
 \usepackage{pgfplots}
-\setbeamertemplate{navigation symbols}{}%remove navigation symbols
 
+\setbeamertemplate{navigation symbols}{}%remove navigation symbols
+\setbeamertemplate{caption}{\raggedright\insertcaption\par}
 
 \input{beamer-lake-fig.tex}
 
 \begin{document}
 
 \begin{frame}
-\primaryprofile
+
+\begin{tabular}{c|c}
+\lakediagramblue & lake diagram blue \\ 
+\lakediagramgreen[0.6] & lake diagram green
+\end{tabular}
+
+\end{frame}
+
+
+\begin{frame}
+
+\begin{tabular}{c|c}
+\isolatedprofile & isolated profile \\ 
+\headwaterprofile & headwater profile \\
+\primaryprofile & primary profile \\
+\secondaryprofile & secondary profile
+\end{tabular}
+
+\end{frame}
+
+\begin{frame}
+\connectivitydiagram
 \end{frame}
 
 \end{document}

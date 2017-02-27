@@ -1,3 +1,22 @@
+%% beamer-lake-fig.tex
+%%
+%% Copyright (C) 2016 - 2017  Joseph Stachelek
+%%
+%% This file is part of beamer-lake-fig repository.
+%%
+%% beamer-lake-fig is free software: you can redistribute it
+%% and/or modify it under the terms of the GNU General Public License as
+%% published by the Free Software Foundation, either version 2 of the
+%% License, or (at your option) any later version.
+%%
+%% beamer-lake-fig is distributed in the hope that it will be
+%% useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General
+%% Public License for more details.
+%%
+%% You should have received a copy of the GNU General Public License along with
+%% beamer-lake-fig.  If not, see <http://www.gnu.org/licenses/>.
+
 \PassOptionsToPackage{dvipsnames}{xcolor}
 
 \def\begincols{\begin{columns}}
@@ -5,9 +24,11 @@
 \def\begincol{\begin{column}}
 \def\endcol{\end{column}}
 
+\def\testonearg[#1]{Testing one arg: '#1'}
+
 \usetikzlibrary{decorations.pathmorphing,calc}
-\def\lakediagramgreen{
-\begin{tikzpicture}[scale = 0.6]
+\def\lakediagramgreen[#1]{
+\begin{tikzpicture}[scale = #1]
 % https://tex.stackexchange.com/questions/95044/create-diagrams-in-latex-with-tikz
 
 % Define some reference points 
@@ -133,8 +154,15 @@
 
 \usepackage{array}
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+% \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\def\mystrut(#1,#2){\vrule height #1 depth #2 width 0pt}
+
+\newcolumntype{C}[1]{%
+   >{\mystrut(3ex,2ex)\centering}%
+   p{#1}%
+   <{}}
 
 \newcolumntype{K}[1]{%
  >{\vbox to 5ex\bgroup\vfill\centering}%
