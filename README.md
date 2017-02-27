@@ -16,6 +16,10 @@ see `main.pdf`
 
 Feature requests and PR's welcome!
 
+## Links
+
+This collection inspired by [JLDiaz](https://tex.stackexchange.com/questions/95044/create-diagrams-in-latex-with-tikz)
+
 ## License
 
 The aggregation is provided under the GPL (version 2 or later).

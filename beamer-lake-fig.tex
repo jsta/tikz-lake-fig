@@ -19,8 +19,6 @@
 
 \PassOptionsToPackage{dvipsnames}{xcolor}
 
-\def\testonearg[#1]{Testing one arg: '#1'}
-
 \usetikzlibrary{decorations.pathmorphing,calc}
 \def\lakediagramgreen[#1]{
 \begin{tikzpicture}[scale = #1]
@@ -250,9 +248,9 @@
 \end{tikzpicture}
 }
 
-\def\isolatedprofile[#1]{
+\def\isolatedprofile[#1]#2{
 \begin{tikzpicture}[scale = #1]
-  \node at (0.65, 1) {Isolated};
+  \node at (0.2, 1) {#2};
 \fill[
   top color=cyan!100,
   bottom color=cyan!40,
