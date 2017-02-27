@@ -2,6 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{pgfplots}
+\usepackage{tabularx}
 
 \setbeamertemplate{navigation symbols}{}%remove navigation symbols
 \setbeamertemplate{caption}{\raggedright\insertcaption\par}
@@ -13,20 +14,20 @@
 \begin{frame}
 
 \begin{tabular}{c|c}
-\lakediagramblue[0.6]  & lake diagram blue \\ 
-\lakediagramgreen[0.6] & lake diagram green
+\begin{minipage}{0.65\textwidth}\lakediagramblue[0.6]\end{minipage} & lake diagram blue\\
+\begin{minipage}{0.65\textwidth}\lakediagramgreen[0.6]\end{minipage} & lake diagram green
 \end{tabular}
 
 \end{frame}
 
 
 \begin{frame}
-
+ 
 \begin{tabular}{c|c}
-\isolatedprofile[0.4]{Isolated} & isolated profile \\ 
-\headwaterprofile[0.6] & headwater profile \\
-\primaryprofile[0.6] & primary profile \\
-\secondaryprofile[0.6] & secondary profile
+ \begin{minipage}{0.65\textwidth}\isolatedprofile[0.4]{Isolated}\end{minipage} & isolated profile\\
+ \begin{minipage}{0.65\textwidth}\headwaterprofile[0.6]\end{minipage} & headwater profile\\
+ \begin{minipage}{0.65\textwidth}\primaryprofile[0.6]\end{minipage} & primary profile\\
+ \begin{minipage}{0.65\textwidth}\secondaryprofile[0.6]\end{minipage} & secondary profile
 \end{tabular}
 
 \end{frame}
