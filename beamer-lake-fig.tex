@@ -383,3 +383,38 @@
   (2,0) {[rounded corners=45pt] -- (0,-3)} -- (-2,0) arc (180:360:2cm and 0.5cm);
 \end{tikzpicture}
 }
+
+\def\isolatedflux[#1]#2{
+\begin{tikzpicture}[scale = #1]
+  \node at (1.5, 1) {#2};
+
+\pgfsetarrowsend{latex}
+\pgfsetlinewidth{1ex}
+
+\node at (3, 5) {Evaporation};
+\pgfpathmoveto{\pgfpoint{0cm}{1cm}}
+\pgfpathlineto{\pgfpoint{0cm}{4cm}}
+\pgfusepath{stroke}
+
+\node at (-3, 5) {Precipitation};
+\pgfpathmoveto{\pgfpoint{-1cm}{4cm}}
+\pgfpathlineto{\pgfpoint{-1cm}{1cm}}
+\pgfusepath{stroke}
+
+\fill[
+  top color=cyan!100,
+  bottom color=cyan!40,
+  shading=axis,
+  opacity=0.45
+  ] 
+  (0,0) circle (2cm and 0.5cm);
+\fill[
+  left color=cyan!50!black,
+  right color=cyan!50!black,
+  middle color=cyan!100,
+  shading=axis,
+  opacity=0.25
+  ] 
+  (2,0) {[rounded corners=45pt] -- (0,-3)} -- (-2,0) arc (180:360:2cm and 0.5cm);
+\end{tikzpicture}
+}
