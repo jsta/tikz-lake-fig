@@ -18,8 +18,35 @@
 %% beamer-lake-fig.  If not, see <http://www.gnu.org/licenses/>.
 
 \PassOptionsToPackage{dvipsnames}{xcolor}
-
 \usetikzlibrary{decorations.pathmorphing,calc}
+
+\usepackage{subfiles}
+\usepackage{pbox}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{colortbl}
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\def\mystrut(#1,#2){\vrule height #1 depth #2 width 0pt}
+
+\newcolumntype{C}[1]{%
+   >{\mystrut(3ex,2ex)\centering}%
+   p{#1}%
+   <{}}
+
+\newcolumntype{K}[1]{%
+ >{\vbox to 5ex\bgroup\vfill\centering}%
+ p{#1}%
+ <{\egroup}}
+
+% \definecolor{darkgreen}{rgb}{0.13,0.62,0.25}
+\definecolor{darkgreen}{RGB}{14,90,30}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \def\lakediagramgreen[#1]{
 \begin{tikzpicture}[scale = #1]
 % https://tex.stackexchange.com/questions/95044/create-diagrams-in-latex-with-tikz
@@ -100,6 +127,8 @@
 \end{tikzpicture}
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \def\connectivitydiagram[#1]{
 \begin{columns}
 
@@ -139,29 +168,8 @@
 
 }
 
-\usepackage{subfiles}
-\usepackage{pbox}
-\usepackage{multirow}
-\usepackage{tabularx}
-\usepackage{colortbl}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\usepackage{array}
-\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-% \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-
-\def\mystrut(#1,#2){\vrule height #1 depth #2 width 0pt}
-
-\newcolumntype{C}[1]{%
-   >{\mystrut(3ex,2ex)\centering}%
-   p{#1}%
-   <{}}
-
-\newcolumntype{K}[1]{%
- >{\vbox to 5ex\bgroup\vfill\centering}%
- p{#1}%
- <{\egroup}} 
- 
 \def\secondaryprofile[#1]{
 \begin{tikzpicture}[scale = #1]
   \draw [-,ultra thick, cyan!40] (1,0) to [out=0,in=180] (2.25,0);
@@ -203,6 +211,8 @@
 \end{tikzpicture}
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \def\headwaterprofile[#1]{
 \begin{tikzpicture}[scale = #1]
   \draw [-,ultra thick, cyan!40] (2,0) to [out=0,in=180] (3.25,0);
@@ -224,6 +234,8 @@
   (2,0) {[rounded corners=45pt] -- (0,-3)} -- (-2,0) arc (180:360:2cm and 0.5cm);
 \end{tikzpicture}
 }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \def\primaryprofile[#1]{
 \begin{tikzpicture}[scale = #1]
@@ -248,6 +260,8 @@
 \end{tikzpicture}
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \def\isolatedprofile[#1]#2{
 \begin{tikzpicture}[scale = #1]
   \node at (0.2, 1) {#2};
@@ -269,9 +283,7 @@
 \end{tikzpicture}
 }
 
-% \definecolor{darkgreen}{rgb}{0.13,0.62,0.25}
-\definecolor{darkgreen}{RGB}{14,90,30}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \def\primaryprofileplus{
 \begin{tikzpicture}[scale = 0.8]
@@ -295,6 +307,8 @@
   (2,0) {[rounded corners=45pt] -- (0,-3)} -- (-2,0) arc (180:360:2cm and 0.5cm);
 \end{tikzpicture}
 }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \def\secondaryprofileplus{
 \begin{tikzpicture}[scale = 0.8]
@@ -338,6 +352,8 @@
 \end{tikzpicture}
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \def\primaryprofileblue{
 \begin{tikzpicture}[scale = 0.8]
   \draw [-,line width=5pt, cyan!40] (-2,0) to [out=0,in=180] (-3.25,0);
@@ -361,6 +377,8 @@
 \end{tikzpicture}
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \def\primaryprofilegreen{
 \begin{tikzpicture}[scale = 0.8]
   \draw [-,line width=5pt, cyan!40] (-2,0) to [out=0,in=180] (-3.25,0);
@@ -383,6 +401,8 @@
   (2,0) {[rounded corners=45pt] -- (0,-3)} -- (-2,0) arc (180:360:2cm and 0.5cm);
 \end{tikzpicture}
 }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \def\isolatedflux[#1]#2{
 \begin{tikzpicture}[scale = #1]
