@@ -438,3 +438,60 @@
   (2,0) {[rounded corners=45pt] -- (0,-3)} -- (-2,0) arc (180:360:2cm and 0.5cm);
 \end{tikzpicture}
 }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\isolatedwireframe[#1]{
+\begin{tikzpicture}[scale = #1]
+
+  % \draw[step=1cm,gray,very thin] (-4,-3) grid (4,4);
+
+  \draw (0,0) circle (2cm and 0.5cm);
+  \draw (2,0) {[rounded corners=45pt] -- (0,-3)} -- (-2,0) arc (180:360:2cm and 0.5cm);
+  
+  \pgfsetarrowsend{latex}
+  \pgfsetlinewidth{1ex}
+
+  \node[rotate=-90] at (0.6, 2){Evaporation};
+  \node[rotate=-90] at (-0.6, 2){Precipitation};
+  \node at (1.5, -2.1){Groundwater};
+  \node at (-1.5, -2.1){Groundwater};
+  \node at (-3, -0.5){Inflow};
+  \node at (-3, 1){Runoff};
+  \node at (3, -0.5){Outflow};
+  
+  % GW out
+  \pgfpathmoveto{\pgfpoint{1cm}{-1.5cm}}
+  \pgfpathlineto{\pgfpoint{2cm}{-2cm}}
+  \pgfusepath{stroke}
+  
+  % GW in
+  \pgfpathmoveto{\pgfpoint{-2cm}{-2cm}}
+  \pgfpathlineto{\pgfpoint{-1cm}{-1.5cm}}
+  \pgfusepath{stroke}
+  
+  % SW out
+  \pgfpathmoveto{\pgfpoint{2.2cm}{0cm}}
+  \pgfpathlineto{\pgfpoint{4cm}{0cm}}
+  \pgfusepath{stroke}
+  
+  % SW in
+  \pgfpathmoveto{\pgfpoint{-4cm}{0cm}}
+  \pgfpathlineto{\pgfpoint{-2.2cm}{0cm}}
+  \pgfusepath{stroke}
+  
+  % Runoff in
+  \pgfpathmoveto{\pgfpoint{-3cm}{0.6cm}}
+  \pgfpathlineto{\pgfpoint{-2.2cm}{0.6cm}}
+  \pgfusepath{stroke}
+  
+  \pgfpathmoveto{\pgfpoint{0.26cm}{1cm}}
+  \pgfpathlineto{\pgfpoint{0.26cm}{3cm}}
+  \pgfusepath{stroke}
+  
+  \pgfpathmoveto{\pgfpoint{-0.3cm}{3cm}}
+  \pgfpathlineto{\pgfpoint{-0.3cm}{1cm}}
+  \pgfusepath{stroke}
+  
+\end{tikzpicture}
+}
