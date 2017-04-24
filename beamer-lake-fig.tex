@@ -170,39 +170,39 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\def\secondaryprofile[#1]{
+\def\secondaryprofile[#1]#2{
 \begin{tikzpicture}[scale = #1]
-  \draw [-,ultra thick, cyan!40] (1,0) to [out=0,in=180] (2.25,0);
-  \draw [-,ultra thick, dashed, cyan!40] (6,0) to [out=0,in=180] (7.25,0);
+  \draw [-,ultra thick, #2!40] (1,0) to [out=0,in=180] (2.25,0);
+  \draw [-,ultra thick, dashed, #2!40] (6,0) to [out=0,in=180] (7.25,0);
   % \node at (2, 1) {Secondary};
 \fill[
-  top color=cyan!100,
-  bottom color=cyan!40,
+  top color=#2!100,
+  bottom color=#2!40,
   shading=axis,
   opacity=0.45
   ] 
   (0,0) circle (1cm and 0.25cm);
 \fill[
-  left color=cyan!50!black,
-  right color=cyan!50!black,
-  middle color=cyan!100,
+  left color=#2!50!black,
+  right color=#2!50!black,
+  middle color=#2!100,
   shading=axis,
   opacity=0.25
   ] 
   (1,0) {[rounded corners=45pt] -- (0,-2)} -- (-1,0) arc (180:360:1cm and 0.25cm);
   
 \fill[
-  top color=cyan!100,
-  bottom color=cyan!40,
+  top color=#2!100,
+  bottom color=#2!40,
   shading=axis,
   opacity=0.45,
   xshift=120
   ] 
   (0,0) circle (2cm and 0.5cm);
 \fill[
-  left color=cyan!50!black,
-  right color=cyan!50!black,
-  middle color=cyan!100,
+  left color=#2!50!black,
+  right color=#2!50!black,
+  middle color=#2!100,
   shading=axis,
   opacity=0.25,
   xshift=120
@@ -213,21 +213,21 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\def\headwaterprofile[#1]{
+\def\headwaterprofile[#1]#2{
 \begin{tikzpicture}[scale = #1]
-  \draw [-,ultra thick, cyan!40] (2,0) to [out=0,in=180] (3.25,0);
+  \draw [-,ultra thick, #2!40] (2,0) to [out=0,in=180] (3.25,0);
   % \node at (0.4, 1) {Headwater};
 \fill[
-  top color=cyan!100,
-  bottom color=cyan!40,
+  top color=#2!100,
+  bottom color=#2!40,
   shading=axis,
   opacity=0.45
   ] 
   (0,0) circle (2cm and 0.5cm);
 \fill[
-  left color=cyan!50!black,
-  right color=cyan!50!black,
-  middle color=cyan!100,
+  left color=#2!50!black,
+  right color=#2!50!black,
+  middle color=#2!100,
   shading=axis,
   opacity=0.25
   ] 
@@ -237,22 +237,22 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\def\primaryprofile[#1]{
+\def\primaryprofile[#1]#2{
 \begin{tikzpicture}[scale = #1]
-  \draw [-,ultra thick, cyan!40] (-2,0) to [out=0,in=180] (-3.25,0);
-  \draw [-,ultra thick, dashed, cyan!40] (2,0) to [out=0,in=180] (3.25,0);
+  \draw [-,ultra thick, #2!40] (-2,0) to [out=0,in=180] (-3.25,0);
+  \draw [-,ultra thick, dashed, #2!40] (2,0) to [out=0,in=180] (3.25,0);
   % \node at (0.4, 1) {Primary};
 \fill[
-  top color=cyan!100,
-  bottom color=cyan!40,
+  top color=#2!100,
+  bottom color=#2!40,
   shading=axis,
   opacity=0.45
   ] 
   (0,0) circle (2cm and 0.5cm);
 \fill[
-  left color=cyan!50!black,
-  right color=cyan!50!black,
-  middle color=cyan!100,
+  left color=#2!50!black,
+  right color=#2!50!black,
+  middle color=#2!100,
   shading=axis,
   opacity=0.25
   ] 
@@ -262,19 +262,19 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\def\isolatedprofile[#1]{
+\def\isolatedprofile[#1]#2{
 \begin{tikzpicture}[scale = #1]
 \fill[
-  top color=cyan!100,
-  bottom color=cyan!40,
+  top color=#2!100,
+  bottom color=#2!40,
   shading=axis,
   opacity=0.45
   ] 
   (0,0) circle (2cm and 0.5cm);
 \fill[
-  left color=cyan!50!black,
-  right color=cyan!50!black,
-  middle color=cyan!100,
+  left color=#2!50!black,
+  right color=#2!50!black,
+  middle color=#2!100,
   shading=axis,
   opacity=0.25
   ] 
