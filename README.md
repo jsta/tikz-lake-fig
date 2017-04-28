@@ -12,7 +12,7 @@ Each command takes a single argument specifiying the scale of the diagram
 
 ## Gallery
 
-see `main.pdf`
+see [main.pdf](https://github.com/jsta/beamer-lake-fig/blob/master/main.pdf)
 
 ## Contributing
 
