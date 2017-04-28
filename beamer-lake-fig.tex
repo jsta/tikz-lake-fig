@@ -172,8 +172,8 @@
 
 \def\secondaryprofile[#1]#2{
 \begin{tikzpicture}[scale = #1]
-  \draw [-,ultra thick, #2!40] (1,0) to [out=0,in=180] (1.55,0);
-  \draw [-,ultra thick, dashed, #2!40] (5.5,0) to [out=0,in=180] (6.2,0);
+  \draw [-,line width = 5, #2!40] (0.9,0) to [out=0,in=180] (1.55,0);
+  \draw [-,line width = 5, dashed, #2!40] (5.5,0) to [out=0,in=180] (6.2,0);
   % \node at (2, 1) {Secondary};
 \fill[
   top color=#2!100,
@@ -215,7 +215,7 @@
 
 \def\headwaterprofile[#1]#2{
 \begin{tikzpicture}[scale = #1]
-  \draw [-,ultra thick, #2!40] (2,0) to [out=0,in=180] (2.7,0);
+  \draw [-,line width = 5, #2!40] (1.95,0) to [out=0,in=180] (2.7,0);
   % \node at (0.4, 1) {Headwater};
 \fill[
   top color=#2!100,
@@ -239,8 +239,8 @@
 
 \def\primaryprofile[#1]#2{
 \begin{tikzpicture}[scale = #1]
-  \draw [-,ultra thick, #2!40] (-2,0) to [out=0,in=180] (-2.7,0);
-  \draw [-,ultra thick, dashed, #2!40] (2,0) to [out=0,in=180] (2.7,0);
+  \draw [-,line width = 5, #2!40] (-2,0) to [out=0,in=180] (-2.7,0);
+  \draw [-,line width = 5, dashed, #2!40] (2,0) to [out=0,in=180] (2.7,0);
   % \node at (0.4, 1) {Primary};
 \fill[
   top color=#2!100,
