@@ -1,2 +1,2 @@
-main.pdf: main.tex
+main.pdf: main.tex beamer-lake-fig.tex
 	pdflatex main.tex
