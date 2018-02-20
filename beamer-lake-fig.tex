@@ -17,7 +17,7 @@
 %% You should have received a copy of the GNU General Public License along with
 %% beamer-lake-fig.  If not, see <http://www.gnu.org/licenses/>.
 
-\PassOptionsToPackage{dvipsnames}{xcolor}
+\PassOptionsToPackage{x11names}{xcolor}
 \usetikzlibrary{decorations.pathmorphing,calc}
 
 \usepackage{subfiles}
@@ -46,7 +46,7 @@
 \definecolor{darkgreen}{RGB}{14,90,30}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\section{lakediagramgreen}
 \def\lakediagramgreen[#1]{
 \begin{tikzpicture}[scale = #1]
 % https://tex.stackexchange.com/questions/95044/create-diagrams-in-latex-with-tikz
@@ -87,6 +87,7 @@
 \end{tikzpicture}
 }
 
+\section{lakediagramblue}
 \def\lakediagramblue[#1]{
 \begin{tikzpicture}[scale = #1]
 % https://tex.stackexchange.com/questions/95044/create-diagrams-in-latex-with-tikz
@@ -128,7 +129,7 @@
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\section{connectivitydiagram}
 \def\connectivitydiagram[#1]{
 \begin{columns}
 
@@ -169,7 +170,7 @@
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\section{secondaryprofile}
 \def\secondaryprofile[#1]#2{
 \begin{tikzpicture}[scale = #1]
   \draw [-,line width = 5, #2!100!black] (0.9,0) to [out=0,in=180] (1.55,0);
@@ -212,11 +213,11 @@
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\section{secondaryprofileflatequal}
 \def\secondaryprofileflatequal[#1]#2{
 \begin{tikzpicture}[scale = #1]
-  \draw [fill=#2!100, ultra thick] (0.1,-.3) rectangle (1.7,0.1);
-  \draw [fill=#2!100, ultra thick] (5.3,0.1) rectangle (6.2,-0.3);
+  \draw [fill=#2, ultra thick] (0.1,-.3) rectangle (1.7,0.1);
+  \draw [fill=#2, ultra thick] (5.3,0.1) rectangle (6.2,-0.3);
   % \node at (2, 1) {Secondary};
 \draw
   [fill=#2,
@@ -247,11 +248,11 @@
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\section{primaryprofileflatequal}
 \def\primaryprofileflatequal[#1]#2{
 \begin{tikzpicture}[scale = #1]
-  \draw [fill=#2!100, ultra thick] (1.8,-.3) rectangle (3.2,0.1);
-  \draw [fill=#2!100, ultra thick] (-1.8,0.1) rectangle (-3.2,-0.3);
+  \draw [fill=#2, ultra thick] (1.8,-.3) rectangle (3.2,0.1);
+  \draw [fill=#2, ultra thick] (-1.8,0.1) rectangle (-3.2,-0.3);
   % \node at (2, 1) {Secondary};
 \draw
   [fill=#2,
@@ -269,7 +270,28 @@
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{headwaterprofileflatequal}
+\def\headwaterprofileflatequal[#1]#2{
+\begin{tikzpicture}[scale = #1]
+  \draw [fill=#2, ultra thick] (1.8,-.3) rectangle (3.2,0.1);
+  % \node at (2, 1) {Secondary};
+\draw
+  [fill=#2,
+  ultra thick
+  ] 
+  (0,0) circle (2cm and 0.5cm);
+\clip (-2,-3) rectangle (2,0);
+\draw
+  [fill=#2,
+  ultra thick
+  ] 
+  (2,0) {[rounded corners=45pt] -- (0,-3)} -- (-2,0) arc (180:360:2cm and 0.5cm);
 
+\end{tikzpicture}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{isolatedprofileflatequal}
 \def\isolatedprofileflatequal[#1]#2{
 \begin{tikzpicture}[scale = #1]
 \draw
@@ -288,7 +310,7 @@
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\section{headwaterprofile}
 \def\headwaterprofile[#1]#2{
 \begin{tikzpicture}[scale = #1]
   \draw [-,line width = 5, #2!100!black] (1.95,0) to [out=0,in=180] (2.7,0);
@@ -312,7 +334,7 @@
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\section{primaryprofile}
 \def\primaryprofile[#1]#2{
 \begin{tikzpicture}[scale = #1]
   \draw [-,line width = 5, #2!100!black] (-2,0) to [out=0,in=180] (-2.7,0);
@@ -337,7 +359,7 @@
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\section{isolatedprofile}
 \def\isolatedprofile[#1]#2{
 \begin{tikzpicture}[scale = #1]
 \fill[
@@ -359,7 +381,7 @@
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\section{primaryprofileplus}
 \def\primaryprofileplus{
 \begin{tikzpicture}[scale = 0.8]
   \draw [-,line width=3pt, cyan!40] (-2,0) to [out=0,in=180] (-3.25,0);
@@ -384,7 +406,7 @@
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\section{secondaryprofileplus}
 \def\secondaryprofileplus{
 \begin{tikzpicture}[scale = 0.8]
   \draw [-,line width=3pt, cyan!40] (-1,0) to [out=0,in=180] (-2.25,0);
@@ -428,7 +450,7 @@
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\section{primaryprofileblue}
 \def\primaryprofileblue{
 \begin{tikzpicture}[scale = 0.8]
   \draw [-,line width=5pt, cyan!40] (-2,0) to [out=0,in=180] (-3.25,0);
@@ -453,7 +475,7 @@
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\section{primaryprofilegreen}
 \def\primaryprofilegreen{
 \begin{tikzpicture}[scale = 0.8]
   \draw [-,line width=5pt, cyan!40] (-2,0) to [out=0,in=180] (-3.25,0);
@@ -478,7 +500,7 @@
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\section{isolatedflux}
 \def\isolatedflux[#1]#2{
 \begin{tikzpicture}[scale = #1]
   \node at (1.5, 1) {#2};
@@ -515,7 +537,7 @@
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\section{isolatedwireframe}
 \def\isolatedwireframe[#1]{
 \begin{tikzpicture}[scale = #1]
 
@@ -573,7 +595,7 @@
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\section{secondarywireframe}
 \def\secondarywireframe[#1]{
 \begin{tikzpicture}[scale = #1]
 

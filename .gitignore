@@ -9,3 +9,5 @@
 *.log
 *.synctex.gz
 *.html
+*.aux
+*.out
