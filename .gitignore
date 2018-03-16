@@ -11,3 +11,5 @@
 *.html
 *.aux
 *.out
+main.fls
+main.fdb_latexmk
