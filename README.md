@@ -1,5 +1,17 @@
 # Collection of lake diagrams for use in LaTeX documents 
 
+## Prerequsites
+
+### LaTeX packages
+
+* pgfplots
+
+* subfiles
+
+* import
+
+* pbox
+
 ## Usage
 
 You can fork this repo and call diagram commands in your document by setting `beamer-lake-fig.tex` as an input (e.g. `\input{beamer-lake-fig.tex}`)
