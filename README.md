@@ -14,7 +14,7 @@
 
 ## Usage
 
-You can fork this repo and call diagram commands in your document by setting `beamer-lake-fig.tex` as an input (e.g. `\input{beamer-lake-fig.tex}`)
+You can fork this repo and call diagram commands in your document by setting `beamer-lake-fig.sty` as an input (e.g. `\usepackage{beamer-lake-fig}`)
 
 Each command takes a single argument specifiying the scale of the diagram
 
