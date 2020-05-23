@@ -18,7 +18,7 @@ Each command takes a single argument specifiying the scale of the diagram
 
 \begin{document}
 	
-\lakediagramgreen[0.4]
+z\lakediagramgreen[0.4]
 	
 \end{document}
 ```
@@ -26,9 +26,10 @@ Each command takes a single argument specifiying the scale of the diagram
 
 ### LaTeX packages
 
-|--------|---------|
-|pgfplots| subfiles|
-|import  | pbox    |
+| | |
+| ----------- | ----------- |
+| import      | pbox       |
+| pgfplots    | subfiles   |
 
 ## Gallery
 
