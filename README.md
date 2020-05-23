@@ -26,13 +26,9 @@ Each command takes a single argument specifiying the scale of the diagram
 
 ### LaTeX packages
 
-* pgfplots
-
-* subfiles
-
-* import
-
-* pbox
+|--------|---------|
+|pgfplots| subfiles|
+|import  | pbox    |
 
 ## Gallery
 
