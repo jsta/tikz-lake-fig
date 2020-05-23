@@ -1,6 +1,6 @@
 .PHONY: all
 
-all: main.pdf
+all: beamer-lake-fig-doc.pdf
 
-main.pdf: main.tex beamer-lake-fig.tex
-	pdflatex main.tex
+beamer-lake-fig-doc.pdf: beamer-lake-fig-doc.tex beamer-lake-fig.sty
+	pdflatex $<
