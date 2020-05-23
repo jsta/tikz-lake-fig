@@ -49,7 +49,7 @@
 \definecolor{darkgreen}{RGB}{23,155,51}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{lakediagramgreen}
+% \section{lakediagramgreen}
 \def\lakediagramgreen[#1]{
 \begin{tikzpicture}[scale = #1]
 % https://tex.stackexchange.com/questions/95044/create-diagrams-in-latex-with-tikz
@@ -90,7 +90,7 @@
 \end{tikzpicture}
 }
 
-\section{lakediagramblue}
+% \section{lakediagramblue}
 \def\lakediagramblue[#1]{
 \begin{tikzpicture}[scale = #1]
 % https://tex.stackexchange.com/questions/95044/create-diagrams-in-latex-with-tikz
@@ -132,7 +132,7 @@
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{isolated}
+% \section{isolated}
 \def\isolated[#1]{
   \begin{tikzpicture}[scale = #1]
     \draw[cyan, ultra thick, domain=0:350, smooth cycle, fill=cyan] plot (\x:1+rnd*0.5);
@@ -142,7 +142,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{headwater}
+% \section{headwater}
 \def\headwater[#1]{
   \begin{tikzpicture}[scale = #1]
     \draw [-,ultra thick, cyan] (0,0) to [out=90,in=0] (0.2,-2) to [out=180,in=90] (-1,-3);
@@ -153,7 +153,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{primary}
+% \section{primary}
 \def\primary[#1]{
   \begin{tikzpicture}[scale = #1]
     \draw [-,ultra thick, cyan] (-1,3) to [out=270,in=180] (0.2,2) to [out=0,in=90] (0,0);
@@ -164,7 +164,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{secondary}
+% \section{secondary}
 \def\secondary[#1]{
   \begin{tikzpicture}[scale = #1]
     \draw [-,ultra thick, cyan] (-1,3) to [out=270,in=180] (0.2,2) to [out=0,in=90] (0,0.3) to [out=90,in=0] (0,-1) to [out=90,in=0] (0.2,-2) to [out=180,in=90] (-1,-3);
@@ -176,7 +176,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{secondarypluswatershed}
+% \section{secondarypluswatershed}
 \def\secondarypluswatershed[#1]{
   \begin{tikzpicture}[scale = #1]
   %\draw[step=1cm,gray,very thin] (-3,-2) grid (3,3);
@@ -203,7 +203,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{connectivitydiagram}
+% \section{connectivitydiagram}
 \def\connectivitydiagram[#1]{
 \begin{columns}
 
@@ -228,7 +228,7 @@
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{secondaryprofile}
+% \section{secondaryprofile}
 \def\secondaryprofile[#1]#2{
 \begin{tikzpicture}[scale = #1]
   \draw [-,line width = 5, #2!100!black] (0.9,0) to [out=0,in=180] (1.55,0);
@@ -271,7 +271,7 @@
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{secondaryprofileflatequal}
+% \section{secondaryprofileflatequal}
 \def\secondaryprofileflatequal[#1]#2{
 \begin{tikzpicture}[scale = #1]
   \draw [fill=#2, ultra thick] (0.1,-.3) rectangle (1.7,0.1);
@@ -306,7 +306,7 @@
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{primaryprofileflatequal}
+% \section{primaryprofileflatequal}
 \def\primaryprofileflatequal[#1]#2{
 \begin{tikzpicture}[scale = #1]
   \draw [fill=#2, ultra thick] (1.8,-.3) rectangle (3.2,0.1);
@@ -328,7 +328,7 @@
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{headwaterprofileflatequal}
+% \section{headwaterprofileflatequal}
 \def\headwaterprofileflatequal[#1]#2{
 \begin{tikzpicture}[scale = #1]
   \draw [fill=#2, ultra thick] (1.8,-.3) rectangle (3.2,0.1);
@@ -349,7 +349,7 @@
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{isolatedprofileflatequal}
+% \section{isolatedprofileflatequal}
 \def\isolatedprofileflatequal[#1]#2{
 \begin{tikzpicture}[scale = #1]
 \draw
@@ -368,7 +368,7 @@
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{headwaterprofile}
+% \section{headwaterprofile}
 \def\headwaterprofile[#1]#2{
 \begin{tikzpicture}[scale = #1]
   \draw [-,line width = 5, #2!100!black] (1.95,0) to [out=0,in=180] (2.7,0);
@@ -392,7 +392,7 @@
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{primaryprofile}
+% \section{primaryprofile}
 \def\primaryprofile[#1]#2{
 \begin{tikzpicture}[scale = #1]
   \draw [-,line width = 5, #2!100!black] (-2,0) to [out=0,in=180] (-2.7,0);
@@ -417,7 +417,7 @@
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{isolatedprofile}
+% \section{isolatedprofile}
 \def\isolatedprofile[#1]#2{
 \begin{tikzpicture}[scale = #1]
 \fill[
@@ -439,7 +439,7 @@
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{primaryprofileplus}
+% \section{primaryprofileplus}
 \def\primaryprofileplus{
 \begin{tikzpicture}[scale = 0.8]
   \draw [-,line width=3pt, cyan!40] (-2,0) to [out=0,in=180] (-3.25,0);
@@ -464,7 +464,7 @@
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{secondaryprofileplus}
+% \section{secondaryprofileplus}
 \def\secondaryprofileplus{
 \begin{tikzpicture}[scale = 0.8]
   \draw [-,line width=3pt, cyan!40] (-1,0) to [out=0,in=180] (-2.25,0);
@@ -508,7 +508,7 @@
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{primaryprofileblue}
+% \section{primaryprofileblue}
 \def\primaryprofileblue{
 \begin{tikzpicture}[scale = 0.8]
   \draw [-,line width=5pt, cyan!40] (-2,0) to [out=0,in=180] (-3.25,0);
@@ -533,7 +533,7 @@
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{primaryprofilegreen}
+% \section{primaryprofilegreen}
 \def\primaryprofilegreen{
 \begin{tikzpicture}[scale = 0.8]
   \draw [-,line width=5pt, cyan!40] (-2,0) to [out=0,in=180] (-3.25,0);
@@ -558,7 +558,7 @@
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{isolatedflux}
+% \section{isolatedflux}
 \def\isolatedflux[#1]#2{
 \begin{tikzpicture}[scale = #1]
   \node at (1.5, 1) {#2};
@@ -595,7 +595,7 @@
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{isolatedwireframe}
+% \section{isolatedwireframe}
 \def\isolatedwireframe[#1]{
 \begin{tikzpicture}[scale = #1]
 
@@ -653,7 +653,7 @@
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{secondarywireframe}
+% \section{secondarywireframe}
 \def\secondarywireframe[#1]{
 \begin{tikzpicture}[scale = #1]
 
@@ -715,7 +715,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{watershedconnectivity}
+% \section{watershedconnectivity}
 % See Soranno et al., 2015, Plos One
 \def\watershedconnectivity[#1]{
 \begin{columns}
@@ -822,7 +822,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{incrementalcumulativeloads}
+% \section{incrementalcumulativeloads}
 \def\incrementalcumulativeloads[#1]{
   \begin{tikzpicture}[scale = #1]
   
@@ -867,7 +867,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{retentiontrapping}
+% \section{retentiontrapping}
 \def\retentiontrapping[#1]{
   \begin{tikzpicture}[scale = #1]
   
