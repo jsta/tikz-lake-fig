@@ -18,7 +18,7 @@ Each command takes a single argument specifiying the scale of the diagram
 
 \begin{document}
 	
-z\lakediagramgreen[0.4]
+\lakediagramgreen[0.4]
 	
 \end{document}
 ```
