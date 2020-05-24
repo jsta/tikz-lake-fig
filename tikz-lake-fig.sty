@@ -655,7 +655,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \section{secondarywireframe}
 \def\secondarywireframe[#1]{
-\begin{tikzpicture}[scale = #1]
+\scalebox{#1}{%
+\begin{tikzpicture}
 
   % \draw[step=1cm,gray,very thin] (-4,-3) grid (7,4);
 
@@ -711,6 +712,7 @@
   \pgfusepath{stroke}
   
 \end{tikzpicture}
+}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
