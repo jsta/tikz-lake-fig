@@ -26,14 +26,13 @@ Each command takes a single argument specifiying the scale of the diagram
 
 ### LaTeX packages
 
-| | |
-| ----------- | ----------- |
-| import      | pbox       |
-| pgfplots    | subfiles   |
+| import          | pbox         |
+| --------------- | ------------ |
+| __pgfplots__    | __subfiles__ |
 
 ## Gallery
 
-See [tikz-lake-fig.pdf](https://github.com/jsta/tikz-lake-fig/blob/master/tikz-lake-fig.pdf)
+See [tikz-lake-fig-doc.pdf](https://github.com/jsta/tikz-lake-fig/blob/master/tikz-lake-fig-doc.pdf)
 
 ## Links
 
