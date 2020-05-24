@@ -1,20 +1,20 @@
-# beamer-lake-fig
+# tikz-lake-fig
 
-[![GitHub](https://img.shields.io/github/license/jsta/beamer-lake-fig.svg?color=blue)](http://www.latex-project.org/lppl.txt)
-[![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/jsta/beamer-lake-fig.svg?label=current%20version)](https://github.com/jsta/beamer-lake-fig/releases/latest)
-[![CTAN](https://img.shields.io/ctan/v/beamer-lake-fig.svg)](https://ctan.org/pkg/beamer-lake-fig)
+[![GitHub](https://img.shields.io/github/license/jsta/tikz-lake-fig.svg?color=blue)](http://www.latex-project.org/lppl.txt)
+[![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/jsta/tikz-lake-fig.svg?label=current%20version)](https://github.com/jsta/tikz-lake-fig/releases/latest)
+[![CTAN](https://img.shields.io/ctan/v/tikz-lake-fig.svg)](https://ctan.org/pkg/tikz-lake-fig)
 
 A collection of customizable lake diagrams for use in LaTeX documents.
 
 ## Usage
 
-You can fork this repo and call diagram commands in your document by setting `beamer-lake-fig.sty` as an input (e.g. `\usepackage{beamer-lake-fig}`)
+You can fork this repo and call diagram commands in your document by setting `tikz-lake-fig.sty` as an input (e.g. `\usepackage{tikz-lake-fig}`)
 
 Each command takes a single argument specifiying the scale of the diagram
 
 ```latex
 \documentclass{standalone}
-\usepackage{beamer-lake-fig}
+\usepackage{tikz-lake-fig}
 
 \begin{document}
 	
@@ -33,7 +33,7 @@ Each command takes a single argument specifiying the scale of the diagram
 
 ## Gallery
 
-See [beamer-lake-fig.pdf](https://github.com/jsta/beamer-lake-fig/blob/master/beamer-lake-fig.pdf)
+See [tikz-lake-fig.pdf](https://github.com/jsta/tikz-lake-fig/blob/master/tikz-lake-fig.pdf)
 
 ## Links
 
