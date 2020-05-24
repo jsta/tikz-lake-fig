@@ -4,7 +4,7 @@
 [![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/jsta/tikz-lake-fig.svg?label=current%20version)](https://github.com/jsta/tikz-lake-fig/releases/latest)
 [![CTAN](https://img.shields.io/ctan/v/tikz-lake-fig.svg)](https://ctan.org/pkg/tikz-lake-fig)
 
-A collection of customizable lake diagrams for use in LaTeX documents.
+A collection of schematic diagrams of lakes for use in LaTeX documents.
 
 ## Usage
 
@@ -18,10 +18,13 @@ Each command takes a single argument specifiying the scale of the diagram
 
 \begin{document}
 	
-\lakediagramgreen[0.4]
+\secondarywireframe[1]
 	
 \end{document}
 ```
+
+![tikz lakes](example.png)
+
 ## Prerequsites
 
 ### LaTeX packages
