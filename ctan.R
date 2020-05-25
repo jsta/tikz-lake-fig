@@ -49,7 +49,7 @@ if ("--validate" %in% args) {
 
 # ---- submit ----
 if ("--submit" %in% args) {
-  print("hooray")
+  print("Submitting...")
   fields_submit <- fields_validate
   submit <- httr::POST("https://www.ctan.org/submit/upload",
                          body = fields_submit)
