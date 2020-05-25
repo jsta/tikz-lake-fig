@@ -11,12 +11,13 @@ submit: ctan.R tikz-lake-fig-doc.pdf
 
 tikz-lake-fig-doc.pdf: tikz-lake-fig-doc.tex tikz-lake-fig.sty
 	pdflatex $<
+	-@rm *.log *.out *.aux *.nav *.toc *.snm 2>/dev/null || true
 	
-example.png: example.tex
+example.png: example.tex tikz-lake-fig.sty
 	pdflatex $<
 	# convert example.pdf -interpolative-resize 484x example.pdf
-	convert -density 300 example.pdf -quality 100 $@
-	convert $@ -interpolative-resize 484x $@
+	convert -density 35.1 example.pdf -quality 100 $@
+	# convert $@ -interpolative-resize 484x $@
 	convert -flatten $@ $@
 	-@rm *.log *.out *.aux *.nav *.toc *.snm 2>/dev/null || true
 	
