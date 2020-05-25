@@ -1,8 +1,8 @@
 .PHONY: all build submit
 
-all: tikz-lake-fig-doc.pdf example.png ctan_banner.png
+all: tikz-lake-fig-doc.pdf 
 
-build: ctan.R tikz-lake-fig-doc.pdf
+build: ctan.R tikz-lake-fig-doc.pdf example.png ctan_banner.png
 	Rscript $< --build --validate
 	-@rm *.log *.out *.aux *.nav *.toc *.snm 2>/dev/null || true
 
