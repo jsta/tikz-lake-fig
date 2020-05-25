@@ -14,6 +14,5 @@
 main.fls
 main.fdb_latexmk
 *.zip
-example.tex
 example.pdf
 ctan_banner.pdf
