@@ -29,9 +29,9 @@ Each command takes a single argument specifiying the scale of the diagram
 
 ### LaTeX packages
 
-| import          | pbox         |
-| --------------- | ------------ |
-| __pgfplots__    | __subfiles__ |
+| import          | pbox         | relsize |
+| --------------- | ------------ | ------- |
+| __pgfplots__    | __subfiles__ |         |
 
 ## Gallery
 
