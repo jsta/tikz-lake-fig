@@ -3,11 +3,11 @@
 all: tikz-lake-fig-doc.pdf example.png ctan_banner.png
 
 build: ctan.R tikz-lake-fig-doc.pdf
-	Rscript $< --build
+	Rscript $< --build --validate
 	-@rm *.log *.out *.aux *.nav *.toc *.snm 2>/dev/null || true
 
 submit: ctan.R tikz-lake-fig-doc.pdf
-	Rscript $< --submit
+	Rscript $< --submit --validate
 
 tikz-lake-fig-doc.pdf: tikz-lake-fig-doc.tex tikz-lake-fig.sty
 	pdflatex $<

@@ -4,13 +4,11 @@
 [![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/jsta/tikz-lake-fig.svg?label=current%20version)](https://github.com/jsta/tikz-lake-fig/releases/latest)
 [![CTAN](https://img.shields.io/ctan/v/tikz-lake-fig.svg)](https://ctan.org/pkg/tikz-lake-fig)
 
-A collection of schematic diagrams of lakes for use in LaTeX documents.
+A collection of schematic diagrams of lakes for use in LaTeX documents. Diagrams include representations of material budgets, fluxes, and connectivity arrangements.
 
 ## Usage
 
-You can fork this repo and call diagram commands in your document by setting `tikz-lake-fig.sty` as an input (e.g. `\usepackage{tikz-lake-fig}`)
-
-Each command takes a single argument specifiying the scale of the diagram
+Call diagram commands in your document by setting `tikz-lake-fig.sty` as an input (e.g. `\usepackage{tikz-lake-fig}`). Each command takes a single argument specifiying the scale of the diagram (optionally a second argument for fill color):
 
 ```latex
 \documentclass{standalone}
