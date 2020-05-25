@@ -13,7 +13,7 @@ fields_validate <- list(
   license = "lppl1.3c",
   summary = "A collection of schematic diagrams of lakes for use in LaTeX documents.",
   description = "Commands to produce a variety of schematic lake diagrams for use in LaTeX documents. Diagrams include representations of material budgets, fluxes, and connectivity arrangements.",
-  announcement = "Initial package release",
+  announcement = "Initial package release of tikz-lake-fig to represent the material budgets, fluxes, and connectivity arrangements of lakes.",
   repository = "https://github.com/jsta/tikz-lake-fig", 
   bugtracker = "https://github.com/jsta/tikz-lake-fig/issues",
   support = "https://github.com/jsta/tikz-lake-fig/issues",
