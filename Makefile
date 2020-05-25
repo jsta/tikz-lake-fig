@@ -21,7 +21,7 @@ example.png: example.tex tikz-lake-fig.sty
 	
 ctan_banner.png: ctan_banner.tex tikz-lake-fig.sty
 	pdflatex $<
-	convert -density 32.6 ctan_banner.pdf -quality 100 $@
+	convert -density 48.5 ctan_banner.pdf -quality 100 -splice 0x16 $@
 	convert -flatten $@ $@
 	-@rm *.log *.out *.aux *.nav *.toc *.snm 2>/dev/null || true
 	
