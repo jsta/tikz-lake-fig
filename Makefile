@@ -24,4 +24,6 @@ ctan_banner.png: ctan_banner.tex tikz-lake-fig.sty
 	convert -density 48.5 ctan_banner.pdf -quality 100 -splice 0x16 $@
 	convert -flatten $@ $@
 	-@rm *.log *.out *.aux *.nav *.toc *.snm 2>/dev/null || true
-	
+
+test.pdf: test.tex
+	pdflatex -shell-escape $<
