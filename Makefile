@@ -2,6 +2,11 @@
 
 all: tikz-lake-fig-doc.pdf 
 
+pngs: tikz-lake-fig-doc.tex tikz-lake-fig.sty
+	-pdflatex "\def\makepng{1} \input{$<}"
+	make -f tikz-lake-fig-doc.makefile
+	-@rm *.log *.out *.aux *.nav *.toc *.snm *.dep *.md5 *.figlist *.makefile 2>/dev/null || true
+
 build: ctan.R tikz-lake-fig-doc.pdf example.png ctan_banner.png
 	Rscript $< --build --validate
 	-@rm *.log *.out *.aux *.nav *.toc *.snm 2>/dev/null || true
@@ -27,3 +32,7 @@ ctan_banner.png: ctan_banner.tex tikz-lake-fig.sty
 
 test.pdf: test.tex
 	pdflatex -shell-escape $<
+
+clean: 
+	-@rm *-figure*.pdf *-figure*.png
+	

@@ -9,6 +9,23 @@
 
 \usepackage{tikz-lake-fig}
 
+% https://tex.stackexchange.com/a/1495/52459
+% https://tex.stackexchange.com/a/350081/52459
+\ifdefined\makepng
+  \usetikzlibrary{external}
+  \tikzexternalize[mode=list and make]
+  \tikzset{
+      png export/.style={
+          external/system call/.add={}{; convert -density 300 -transparent white "\image.pdf" "\image.png"},
+          /pgf/images/external info,
+          /pgf/images/include external/.code={
+              \includegraphics[width=\pgfexternalwidth,height=\pgfexternalheight]{##1.png}
+          },
+      }
+  }
+\fi
+
+
 \begin{document}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -123,6 +140,9 @@
 \begin{frame}
 \begin{columns}[t]
 \begin{column}{0.7\textwidth}
+\ifdefined\makepng
+  \tikzset{png export}
+\fi
 \begin{figure}\flushleft
       \watershedconnectivity[0.73]
 \end{figure}
