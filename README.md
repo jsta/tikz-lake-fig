@@ -15,9 +15,9 @@ Call diagram commands in your document by setting `tikz-lake-fig.sty` as an inpu
 \usepackage{tikz-lake-fig}
 
 \begin{document}
-	
+
 \secondarywireframe[1]
-	
+
 \end{document}
 ```
 
@@ -27,9 +27,10 @@ Call diagram commands in your document by setting `tikz-lake-fig.sty` as an inpu
 
 ### LaTeX packages
 
-| import          | pbox         | relsize |
-| --------------- | ------------ | ------- |
-| __pgfplots__    | __subfiles__ |         |
+| import          | pbox         | relsize        |
+| --------------- | ------------ | -------------- |
+| __pgfplots__    | __subfiles__ | __standalone__ |
+| __tikz__        |              |                |
 
 ## Gallery
 
